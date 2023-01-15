@@ -46,7 +46,12 @@ window.onload = () => {
         else { alert(`Заголовок таблиці вже створено`); return }
     };
 
-    document.getElementById('AddTableRow').onclick = function () { createTElement(prompt(`Будь ласка, введіть данны стовбців через кому (у форматі: ${headerNamesArr})`)); }
+    document.getElementById('AddTableRow').onclick = function () {
+        if ([...document.getElementsByTagName('th')][0] != null) {
+            createTElement(prompt(`Будь ласка, введіть данны стовбців через кому (у форматі: ${headerNamesArr})`));
+        }
+        else { alert("Спочатку додайте заголовок таблиці"); return }
+    }
 
     document.getElementById('DeleteTale').onclick = function () {
         deleteTable();
