@@ -1,0 +1,37 @@
+html {
+    font-size: 12px;
+}
+
+body {
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: orange;
+}
+
+.additional_task {
+    font-size: 0.8rem;
+}
+
+@keyframes elementAdd {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.elementAdd {
+    animation-name: elementAdd;
+    animation-duration: 1s;
+}
