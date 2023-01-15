@@ -59,8 +59,6 @@ window.onload = () => {
     }
 
     document.getElementById('DelLastTableRow').onclick = function () {
-
-        console.log(document.getElementsByTagName('td'));
         if ([...document.getElementsByTagName('td')][0] != null) { removeElement(); }
         else { alert(`Таблиця не заповнена`) }
     }
